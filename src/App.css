@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0f2f5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+  background-color: #f0f2f5;
+}
+
+/* 打印样式 */
+@media print {
+  .print-container {
+    transform: none !important;
+    margin: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+}
+
+/* PrintPreview 组件样式 */
+.print-preview-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.print-preview-toolbar {
+  flex-shrink: 0;
+  background-color: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.print-preview-content {
+  flex: 1;
+  overflow: auto;
+  background-color: #f0f2f5;
+}
+
+.preview-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.preview-single-page {
+  display: inline-block;
+  vertical-align: top;
+}
